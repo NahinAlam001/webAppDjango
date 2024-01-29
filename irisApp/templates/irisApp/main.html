@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        {% if result %}
+        <h1>Flower you're trying to classify is {{ result }}</h1>
+        {% endif %}
+        <form action="" method="POST" class="border p-4">
+            {% csrf_token %}
+            <h2 class="mb-4">Enter Information</h2>
+            <div class="form-group">
+                <label for="spl">Enter Sepal Length</label>
+                <input type="number" class="form-control" id="spl" name="spl" required>
+            </div>
+
+            <div class="form-group">
+                <label for="spw">Enter Sepal Width</label>
+                <input type="number" class="form-control" id="spw" name="spw" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ptl">Enter Petal Length</label>
+                <input type="number" class="form-control" id="ptl" name="ptl" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ptw">Enter Petal Width</label>
+                <input type="number" class="form-control" id="ptw" name="ptw" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js links (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
