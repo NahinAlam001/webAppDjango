@@ -1,9 +1,3 @@
-asgiref
 Django
 joblib
-numpy
 scikit-learn
-scipy
-sqlparse
-threadpoolctl
-typing_extensions
