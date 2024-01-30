@@ -1,7 +1,10 @@
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parentSECRET_KEY = "django-insecure-=a2n$#h)044b0c-1e!!0!og)&wqb&yyo%i(xd3zid9h8#te081"
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = "django-insecure-=a2n$#h)044b0c-1e!!0!og)&wqb&yyo%i(xd3zid9h8#te081"
+
 DEBUG = False
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 INSTALLED_APPS = [
@@ -64,9 +67,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-parentSECRET_KEY = "django-insecure-=a2n$#h)044b0c-1e!!0!og)&wqb&yyo%i(xd3zid9h8#te081"
