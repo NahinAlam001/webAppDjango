@@ -1,41 +1,32 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "myApp",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "static/$1"
-      },
-      {
-        "src": "/media/(.*)",
-        "dest": "media/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "myApp/wsgi.py"
-      }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "myApp.settings"
+  "version": 2,
+  "builds": [
+    {
+      "src": "myApp/**",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "static/$1"
     },
-    "functions": {
-      "api": {
-        "runtime": "vercel-python@0.7.0",
-        "includeFiles": ["myApp/*"]
-      }
+    {
+      "src": "/media/(.*)",
+      "dest": "media/$1"
     },
-    "build": {
-      "env": {
-        "PYTHONUNBUFFERED": "true",
-        "PIP_NO_CACHE_DIR": "false",
-        "PIP_DISABLE_PIP_VERSION_CHECK": "true",
-        "DJANGO_SETTINGS_MODULE": "myApp.settings"
-      }
+    {
+      "src": "/(.*)",
+      "dest": "myApp/wsgi.py"
+    }
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "myApp.settings"
+  },
+  "functions": {
+    "api": {
+      "runtime": "vercel-python@0.7.0",
+      "includeFiles": ["myApp/**"]
     }
   }
-  
+}
