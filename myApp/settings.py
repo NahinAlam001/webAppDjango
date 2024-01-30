@@ -1,7 +1,9 @@
+import os
 from pathlib import Path
+
 BASE_DIR = Path(__file__).resolve().parent.parentSECRET_KEY = "django-insecure-=a2n$#h)044b0c-1e!!0!og)&wqb&yyo%i(xd3zid9h8#te081"
 DEBUG = False
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 INSTALLED_APPS = [
     "irisApp.apps.IrisappConfig",
     "django.contrib.admin",
@@ -38,12 +40,7 @@ TEMPLATES = [
     },
 ]
 WSGI_APPLICATION = "myApp.wsgi.application"
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -64,3 +61,6 @@ USE_I18N = True
 USE_TZ = True
 STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
