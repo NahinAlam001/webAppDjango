@@ -1,0 +1,168 @@
+Timing statistics for: Dynamic Simulation: Total Application
+    Average time:                2.9470
+    Maximum time:                2.9470
+    Minimum time:                2.9470
+Timing statistics for: Dynamic Simulation: Config
+    Average time:                0.0056
+    Maximum time:                0.0056
+    Minimum time:                0.0056
+Timing statistics for: Powerflow: Total Application
+    Average time:                1.8854
+    Maximum time:                1.8854
+    Minimum time:                1.8854
+Timing statistics for: Powerflow: Network Parser
+    Average time:                0.2946
+    Maximum time:                0.2946
+    Minimum time:                0.2946
+Timing statistics for: Powerflow: Partition
+    Average time:                0.0036
+    Maximum time:                0.0036
+    Minimum time:                0.0036
+Timing statistics for: Powerflow: Factory Load
+    Average time:                0.0022
+    Maximum time:                0.0022
+    Minimum time:                0.0022
+Timing statistics for: Powerflow: Factory Set Components
+    Average time:                0.0003
+    Maximum time:                0.0003
+    Minimum time:                0.0003
+Timing statistics for: Powerflow: Factory Set Exchange
+    Average time:                0.0000
+    Maximum time:                0.0000
+    Minimum time:                0.0000
+Timing statistics for: Powerflow: Bus Update
+    Average time:                0.0002
+    Maximum time:                0.0002
+    Minimum time:                0.0002
+Timing statistics for: Powerflow: Factory Operations
+    Average time:                0.0003
+    Maximum time:                0.0003
+    Minimum time:                0.0003
+Timing statistics for: Powerflow: Create Mappers
+    Average time:                0.0005
+    Maximum time:                0.0005
+    Minimum time:                0.0005
+Timing statistics for: Powerflow: Map to Matrix
+    Average time:                0.4215
+    Maximum time:                0.4215
+    Minimum time:                0.4215
+Timing statistics for: Powerflow: Map to Vector
+    Average time:                0.0120
+    Maximum time:                0.0120
+    Minimum time:                0.0120
+Timing statistics for: Vector Map: New Vector
+    Average time:                0.0115
+    Maximum time:                0.0115
+    Minimum time:                0.0115
+Timing statistics for: Vector Map: Load Bus Data
+    Average time:                0.0519
+    Maximum time:                0.0519
+    Minimum time:                0.0519
+Timing statistics for: loadBusData: Add Vector Elements
+    Average time:                0.0433
+    Maximum time:                0.0433
+    Minimum time:                0.0433
+Timing statistics for: loadBusData: Fill Buffer
+    Average time:                0.0089
+    Maximum time:                0.0089
+    Minimum time:                0.0089
+Timing statistics for: loadBusData: Add Elements
+    Average time:                0.0185
+    Maximum time:                0.0185
+    Minimum time:                0.0185
+Timing statistics for: Vector Map: Set Vector
+    Average time:                0.0715
+    Maximum time:                0.0715
+    Minimum time:                0.0715
+Timing statistics for: Powerflow: Create Linear Solver
+    Average time:                0.3526
+    Maximum time:                0.3526
+    Minimum time:                0.3526
+Timing statistics for: Powerflow: Solve Linear Equation
+    Average time:                0.6040
+    Maximum time:                0.6040
+    Minimum time:                0.6040
+Timing statistics for: Powerflow: Map to Bus
+    Average time:                0.0002
+    Maximum time:                0.0002
+    Minimum time:                0.0002
+Timing statistics for: mapToBus: get Data
+    Average time:                0.0444
+    Maximum time:                0.0444
+    Minimum time:                0.0444
+Timing statistics for: mapToBus: set Data
+    Average time:                0.0048
+    Maximum time:                0.0048
+    Minimum time:                0.0048
+Timing statistics for: Powerflow: Write Results
+    Average time:                0.0383
+    Maximum time:                0.0383
+    Minimum time:                0.0383
+Timing statistics for: Contingency: Total Application
+    Average time:                0.0380
+    Maximum time:                0.0380
+    Minimum time:                0.0380
+Timing statistics for: Contingency: Write Results
+    Average time:                0.0380
+    Maximum time:                0.0380
+    Minimum time:                0.0380
+Timing statistics for: DS Solve: Miscellaneous
+    Average time:                0.0006
+    Maximum time:                0.0006
+    Minimum time:                0.0006
+Timing statistics for: DS App: solvePreInitialize
+    Average time:                0.0040
+    Maximum time:                0.0040
+    Minimum time:                0.0040
+Timing statistics for: DS Solve: Set Mode
+    Average time:                0.0000
+    Maximum time:                0.0000
+    Minimum time:                0.0000
+Timing statistics for: DS Solve: Make YBus
+    Average time:                0.0024
+    Maximum time:                0.0024
+    Minimum time:                0.0024
+Timing statistics for: DS Solve: Initialization
+    Average time:                0.0010
+    Maximum time:                0.0010
+    Minimum time:                0.0010
+Timing statistics for: DS Solve: execute steps
+    Average time:                1.0054
+    Maximum time:                1.0054
+    Minimum time:                1.0054
+Timing statistics for: DS Solve: Modified Euler Predictor: Make INorton
+    Average time:                0.0753
+    Maximum time:                0.0753
+    Minimum time:                0.0753
+Timing statistics for: DS Solve: Modified Euler Predictor: Linear Solver
+    Average time:                0.2735
+    Maximum time:                0.2735
+    Minimum time:                0.2735
+Timing statistics for: DS Solve: Map Volt to Bus
+    Average time:                0.0748
+    Maximum time:                0.0748
+    Minimum time:                0.0748
+Timing statistics for: DS Solve: Set Volt
+    Average time:                0.0177
+    Maximum time:                0.0177
+    Minimum time:                0.0177
+Timing statistics for: DS Solve: Modified Euler Predictor
+    Average time:                0.0015
+    Maximum time:                0.0015
+    Minimum time:                0.0015
+Timing statistics for: DS Solve: Modified Euler Corrector: Make INorton
+    Average time:                0.0746
+    Maximum time:                0.0746
+    Minimum time:                0.0746
+Timing statistics for: DS Solve: Modified Euler Corrector: Linear Solver
+    Average time:                0.2745
+    Maximum time:                0.2745
+    Minimum time:                0.2745
+Timing statistics for: DS Solve: Modified Euler Corrector
+    Average time:                0.0015
+    Maximum time:                0.0015
+    Minimum time:                0.0015
+Timing statistics for: DS Solve: Check Security
+    Average time:                0.0533
+    Maximum time:                0.0533
+    Minimum time:                0.0533

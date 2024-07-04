@@ -1,0 +1,12 @@
+{
+  "name": "node-red-project",
+  "description": "A Node-RED Project",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "node-red-contrib-branch-data": "link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Branch_Node",
+    "node-red-contrib-bus-data": "link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Bus_Node",
+    "node-red-contrib-generator-data": "link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Generators/",
+    "node-red-contrib-load-data": "link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Loads"
+  }
+}

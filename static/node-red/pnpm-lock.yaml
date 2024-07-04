@@ -1,0 +1,15 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  node-red-contrib-branch-data:
+    specifier: link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Branch_Node
+    version: link:../../../../../downloads/code/testbed_frontend/Power_Network_Nodes/Branch_Node
+  node-red-contrib-bus-data:
+    specifier: link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Bus_Node
+    version: link:../../../../../downloads/code/testbed_frontend/Power_Network_Nodes/Bus_Node
+  node-red-contrib-generator-data:
+    specifier: link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Generators/
+    version: link:../../../../../downloads/code/testbed_frontend/Power_Network_Nodes/Generators
+  node-red-contrib-load-data:
+    specifier: link:/home/tak/downloads/code/testbed_frontend/Power_Network_Nodes/Loads
+    version: link:../../../../../downloads/code/testbed_frontend/Power_Network_Nodes/Loads

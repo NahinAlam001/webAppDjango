@@ -1,0 +1,133 @@
+{
+  "branchPowerflow": [
+    {
+      "bus1": 1,
+      "bus2": 2,
+      "ckt": "0.019380",
+      "p": 1944.914978,
+      "q": -54.454713
+    },
+    {
+      "bus1": 1,
+      "bus2": 5,
+      "ckt": "0.05403001",
+      "p": 1755.278477,
+      "q": 21.234798
+    },
+    { "bus1": 2, "bus2": 3, "ckt": "0.04699", "p": 25.865642, "q": 280.381945 },
+    {
+      "bus1": 2,
+      "bus2": 4,
+      "ckt": "0.05810999",
+      "p": 717.539685,
+      "q": 74.466106
+    },
+    {
+      "bus1": 2,
+      "bus2": 5,
+      "ckt": "0.05695",
+      "p": 354.38024,
+      "q": -1547.096441
+    },
+    { "bus1": 3, "bus2": 4, "ckt": "0.06701", "p": 737.268789, "q": 68.908516 },
+    {
+      "bus1": 4,
+      "bus2": 5,
+      "ckt": "0.01335",
+      "p": -59.314126,
+      "q": 1692.610354
+    },
+    { "bus1": 4, "bus2": 7, "ckt": "0.000000", "p": 82.02927, "q": 75.88052 },
+    { "bus1": 4, "bus2": 9, "ckt": "0.000000", "p": 31.46594, "q": 20.592039 },
+    {
+      "bus1": 5,
+      "bus2": 6,
+      "ckt": "0.000000",
+      "p": 4796.127853,
+      "q": 201.828029
+    },
+    {
+      "bus1": 6,
+      "bus2": 11,
+      "ckt": "0.09498001",
+      "p": 846.110667,
+      "q": 1.901908
+    },
+    {
+      "bus1": 6,
+      "bus2": 12,
+      "ckt": "0.12291",
+      "p": 985.33933,
+      "q": 777.144149
+    },
+    {
+      "bus1": 6,
+      "bus2": 13,
+      "ckt": "0.06615",
+      "p": 541.880946,
+      "q": -673.438219
+    },
+    {
+      "bus1": 7,
+      "bus2": 8,
+      "ckt": "0.000000",
+      "p": 417.163492,
+      "q": -475.301736
+    },
+    { "bus1": 7, "bus2": 9, "ckt": "0.000000", "p": 97.688239, "q": 79.656817 },
+    { "bus1": 9, "bus2": 10, "ckt": "0.03181", "p": 489.938955, "q": 5.171832 },
+    {
+      "bus1": 9,
+      "bus2": 14,
+      "ckt": "0.12711",
+      "p": 440.282452,
+      "q": 198.446937
+    },
+    { "bus1": 10, "bus2": 11, "ckt": "0.08205", "p": 0.107313, "q": 0.037102 },
+    {
+      "bus1": 12,
+      "bus2": 13,
+      "ckt": "0.22092",
+      "p": 2132.500404,
+      "q": -363.447116
+    },
+    {
+      "bus1": 13,
+      "bus2": 14,
+      "ckt": "0.17093",
+      "p": 125.787685,
+      "q": 385.370196
+    }
+  ],
+  "generatorPowers": [
+    { "busNumber": 3, "genId": 1, "pGen": 0.0, "qGen": 463.74709 },
+    { "busNumber": 6, "genId": 1, "pGen": 0.0, "qGen": 149.770062 },
+    { "busNumber": 1, "genId": 1, "pGen": 3700.193454, "qGen": -33.219915 },
+    { "busNumber": 2, "genId": 1, "pGen": 40.0, "qGen": 713.02106 },
+    { "busNumber": 8, "genId": 1, "pGen": 0.0, "qGen": -105.653471 }
+  ],
+  "busVoltagesAndPhaseAngles": [
+    { "busNumber": 12, "phaseAngle": 120.803882, "voltageMagnitude": 1.657346 },
+    { "busNumber": 13, "phaseAngle": -33.58745, "voltageMagnitude": 1.014122 },
+    {
+      "busNumber": 14,
+      "phaseAngle": -147.357167,
+      "voltageMagnitude": -1.44507
+    },
+    {
+      "busNumber": 11,
+      "phaseAngle": -143.775276,
+      "voltageMagnitude": -0.006179
+    },
+    { "busNumber": 10, "phaseAngle": 98.732965, "voltageMagnitude": -0.013001 },
+    { "busNumber": 9, "phaseAngle": 67.540132, "voltageMagnitude": -0.649012 },
+    { "busNumber": 7, "phaseAngle": 57.537944, "voltageMagnitude": -0.777389 },
+    { "busNumber": 4, "phaseAngle": -67.165819, "voltageMagnitude": -0.24829 },
+    { "busNumber": 3, "phaseAngle": -61.79244, "voltageMagnitude": 1.01 },
+    { "busNumber": 6, "phaseAngle": 8.128588, "voltageMagnitude": 1.3 },
+    { "busNumber": 5, "phaseAngle": 15.904713, "voltageMagnitude": -2.891789 },
+    { "busNumber": 1, "phaseAngle": 0.0, "voltageMagnitude": 1.03 },
+    { "busNumber": 2, "phaseAngle": -93.304567, "voltageMagnitude": 1.03 },
+    { "busNumber": 8, "phaseAngle": 138.678582, "voltageMagnitude": 1.09 }
+  ]
+}
