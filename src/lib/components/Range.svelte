@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
   import { createEventDispatcher } from "svelte";
   import { fly, fade } from "svelte/transition";
 
@@ -49,7 +49,7 @@
     mouseEventShield.addEventListener("mouseover", (e) => {
       e.preventDefault();
       e.stopPropagation();
-    });;
+    });
 
     resizeWindow = () => {
       elementX = element.getBoundingClientRect().left;
@@ -59,6 +59,7 @@
     setValue = (val) => {
       value = val;
       dispatch("change", { value });
+      console.log("Value set to:", value);
     };
 
     onTrackEvent = (e) => {
@@ -68,7 +69,7 @@
     };
 
     onHover = (e) => {
-      thumbHover = thumbHover ? false : true;
+      thumbHover = !thumbHover;
     };
 
     onDragStart = (e) => {
@@ -175,6 +176,9 @@
     // Update thumb position + active range track width
     thumb.style.left = `${offsetLeft}px`;
     progressBar.style.width = `${offsetLeft}px`;
+
+    console.log("Thumb position:", offsetLeft);
+    console.log("Progress bar width:", progressBar.style.width);
   }
 </script>
 
@@ -255,77 +259,53 @@
   }
 
   .range__wrapper:focus-visible > .range__track {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px var(--track-focus, #6185ff);
+    box-shadow:
+      0 0 0 2px white,
+      0 0 0 3px var(--track-focus, #6185ff);
   }
 
   .range__track {
-    height: 6px;
-    background-color: var(--track-bgcolor, #d0d0d0);
-    border-radius: 999px;
+    position: relative;
+    background-color: var(--track-background, #d1d5db);
+    border-radius: 1px;
+    height: 0.5rem;
+    cursor: pointer;
+    transition: box-shadow 150ms ease;
   }
 
   .range__track--highlighted {
-    background-color: var(--track-highlight-bgcolor, #6185ff);
-    background: var(
-      --track-highlight-bg,
-      linear-gradient(90deg, gray, #6185ff)
-    );
-    width: 0;
-    height: 6px;
+    background-color: var(--track-highlighted, #3b82f6);
+    border-radius: 1px;
+    height: 0.5rem;
     position: absolute;
-    border-radius: 999px;
+    top: 0;
+    left: 0;
+    transition: width 150ms ease;
   }
 
   .range__thumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--thumb-background, #3b82f6);
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--thumb-bgcolor, white);
     cursor: pointer;
-    border-radius: 999px;
-    margin-top: -8px;
-    transition: box-shadow 100ms;
-    user-select: none;
-    box-shadow: var(
-      --thumb-boxshadow,
-      0 1px 1px 0 rgba(0, 0, 0, 0.14),
-      0 0px 2px 1px rgba(0, 0, 0, 0.2)
-    );
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 150ms ease;
   }
 
   .range__thumb--holding {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-      0 1px 2px 1px rgba(0, 0, 0, 0.2),
-      0 0 0 6px var(--thumb-holding-outline, rgba(113, 119, 250, 0.3));
+    background-color: var(--thumb-hover, #2563eb);
   }
 
   .range__tooltip {
-    pointer-events: none;
     position: absolute;
-    top: -33px;
-    color: var(--tooltip-text, white);
-    width: 128px;
-    padding: 4px 0;
+    bottom: 1.5rem;
+    background-color: var(--tooltip-background, #000);
+    color: var(--tooltip-color, #fff);
     border-radius: 4px;
-    text-align: center;
-    background-color: var(--tooltip-bgcolor, gray);
-    background: var(--tooltip-bg, linear-gradient(45deg, gray, #6185ff));
-  }
-
-  .range__tooltip::after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 7px;
-    width: 7px;
-    background-color: var(--tooltip-bgcolor, #6185ff);
-    bottom: -3px;
-    left: calc(50% - 3px);
-    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-    transform: rotate(-45deg);
-    border-radius: 0 0 0 3px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
   }
 </style>

@@ -1,57 +1,55 @@
 <script lang="ts">
-	import { getBezierPath, BaseEdge, type EdgeProps, EdgeLabelRenderer } from '@xyflow/svelte';
+  import { onMount } from "svelte";
+  import { createEventDispatcher } from "svelte";
+  import { BaseEdge, EdgeLabelRenderer } from "@xyflow/svelte";
 
-	type $$Props = EdgeProps;
+  export let source = { x: 0, y: 0 };
+  export let target = { x: 0, y: 0 };
+  export let sourceHandle = null;
+  export let targetHandle = null;
+  export let sourcePos = null;
+  export let targetPos = null;
 
-	// export let id: $$Props['id'];
-	export let sourceX: $$Props['sourceX'];
-	export let sourceY: $$Props['sourceY'];
-	export let sourcePosition: $$Props['sourcePosition'];
-	export let targetX: $$Props['targetX'];
-	export let targetY: $$Props['targetY'];
-	export let targetPosition: $$Props['targetPosition'];
-	export let markerEnd: $$Props['markerEnd'] = undefined;
-	export let style: $$Props['style'] = undefined;
+  const dispatch = createEventDispatcher();
 
-	$: [edgePath, labelX, labelY] = getBezierPath({
-		sourceX,
-		sourceY,
-		sourcePosition,
-		targetX,
-		targetY,
-		targetPosition
-	});
+  let edgePath = "";
+  let labelX = 0;
+  let labelY = 0;
+
+  // Function to compute the path and label position
+  function getBezierPath({ sourceX, sourceY, targetX, targetY }) {
+    // Adjust path and label positions based on source and target positions
+    const path = `M ${sourceX} ${sourceY} C ${sourceX + (targetX - sourceX) / 2} ${sourceY} ${sourceX + (targetX - sourceX) / 2} ${targetY} ${targetX} ${targetY}`;
+    const labelX = (sourceX + targetX) / 2;
+    const labelY = (sourceY + targetY) / 2;
+
+    return [path, labelX, labelY];
+  }
+
+  // Reactively compute edge path and label positions
+  $: [edgePath, labelX, labelY] = getBezierPath({
+    sourceX: source.x,
+    sourceY: source.y,
+    targetX: target.x,
+    targetY: target.y,
+  });
+
+  $: console.log("Edge Path:", edgePath);
+  $: console.log("Label Position:", labelX, labelY);
 </script>
 
-<BaseEdge path={edgePath} {markerEnd} {style} />
-<EdgeLabelRenderer>
-	<div
-		class="edge-button-container nodrag nopan"
-		style:transform="translate(-50%, -50%) translate({labelX}px,{labelY}px)"
-	/>
-</EdgeLabelRenderer>
+<svg>
+  <BaseEdge {source} {target} {sourceHandle} {targetHandle} path={edgePath} />
+  <EdgeLabelRenderer x={labelX} y={labelY} />
+</svg>
 
-<!-- <style>
-	.edge-button-container {
-		position: absolute;
-		font-size: 12pt;
-		/* everything inside EdgeLabelRenderer has no pointer events by default */
-		/* if you have an interactive element, set pointer-events: all */
-		pointer-events: all;
-	}
-
-	.edge-button {
-		width: 20px;
-		height: 20px;
-		background: #eee;
-		border: 1px solid #fff;
-		cursor: pointer;
-		border-radius: 50%;
-		font-size: 12px;
-		line-height: 1;
-	}
-
-	.edge-button:hover {
-		box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
-	}
-</style> -->
+<style>
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+</style>
