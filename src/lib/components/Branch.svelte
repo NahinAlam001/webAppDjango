@@ -1,34 +1,39 @@
 <script lang="ts">
-	import { getBezierPath, BaseEdge, type EdgeProps, EdgeLabelRenderer } from '@xyflow/svelte';
+  import {
+    getBezierPath,
+    BaseEdge,
+    type EdgeProps,
+    EdgeLabelRenderer,
+  } from "@xyflow/svelte";
 
-	type $$Props = EdgeProps;
+  type $$Props = EdgeProps;
 
-	// export let id: $$Props['id'];
-	export let sourceX: $$Props['sourceX'];
-	export let sourceY: $$Props['sourceY'];
-	export let sourcePosition: $$Props['sourcePosition'];
-	export let targetX: $$Props['targetX'];
-	export let targetY: $$Props['targetY'];
-	export let targetPosition: $$Props['targetPosition'];
-	export let markerEnd: $$Props['markerEnd'] = undefined;
-	export let style: $$Props['style'] = undefined;
+  // export let id: $$Props['id'];
+  export let sourceX: $$Props["sourceX"];
+  export let sourceY: $$Props["sourceY"];
+  export let sourcePosition: $$Props["sourcePosition"];
+  export let targetX: $$Props["targetX"];
+  export let targetY: $$Props["targetY"];
+  export let targetPosition: $$Props["targetPosition"];
+  export let markerEnd: $$Props["markerEnd"] = undefined;
+  export let style: $$Props["style"] = undefined;
 
-	$: [edgePath, labelX, labelY] = getBezierPath({
-		sourceX,
-		sourceY,
-		sourcePosition,
-		targetX,
-		targetY,
-		targetPosition
-	});
+  $: [edgePath, labelX, labelY] = getBezierPath({
+    sourceX,
+    sourceY,
+    sourcePosition,
+    targetX,
+    targetY,
+    targetPosition,
+  });
 </script>
 
 <BaseEdge path={edgePath} {markerEnd} {style} />
 <EdgeLabelRenderer>
-	<div
-		class="edge-button-container nodrag nopan"
-		style:transform="translate(-50%, -50%) translate({labelX}px,{labelY}px)"
-	/>
+  <div
+    class="edge-button-container nodrag nopan"
+    style:transform="translate(-50%, -50%) translate({labelX}px,{labelY}px)"
+  />
 </EdgeLabelRenderer>
 
 <!-- <style>
