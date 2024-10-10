@@ -88,12 +88,12 @@
   `}
 >
   <!-- voltage and angle: above the body -->
-  {#if voltage !== null}
+  {#if data.voltage !== null}
     <div
       class="absolute bottom-full mx-auto w-full items-center text-center text-xs text-black"
       style="background-color: white; padding: 2px;"
     >
-      {formatFloat(voltage)} kV ∠{formatFloat(angle)}°
+      {formatFloat(data.voltage)} kV ∠{formatFloat(data.angle)}°
     </div>
   {/if}
 
